@@ -76,6 +76,19 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+
+li, ul{
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+*{
+  caret-color: transparent;
+}
+
 /*END OF RESET*/
 :root{
   --base-screen-width-desktop: 1152px;
@@ -85,6 +98,7 @@ textarea:not([rows]) {
   --clr-secondary: #00A8CC;
   --clr-dark: #21243D;
   --clr-light: #8695A4;
+  --clr-black: #000;
 
   --ff-primary: "Heebo", sans-serif;
   --ff-body: var(--ff-primary);
@@ -106,7 +120,7 @@ textarea:not([rows]) {
   --fw-400-normal: 400;
 }
 
-@media screen and (max-width: var(--base-screen-width-mobile)){
+@media (max-width: 375px){
   :root{
     --fs-44: 2rem;
     --fs-22: 1.125rem;
@@ -117,10 +131,67 @@ textarea:not([rows]) {
     --fs-20-category: 1rem;
   }
 }
+/*Utility classes*/
 
+/* Colors */
+.clr-primary { color: var(--clr-primary); }
+.clr-secondary { color: var(--clr-secondary); }
+.clr-dark { color: var(--clr-dark); }
+.clr-light { color: var(--clr-light); }
+.clr-black { color: var(--clr-black); }
+
+/* Font Families */
+.ff-primary { font-family: var(--ff-primary); }
+
+/* Font Sizes */
+.fs-44 { font-size: var(--fs-44); }
+.fs-16 { font-size: var(--fs-16); }
+.fs-20-btn { font-size: var(--fs-20-btn); }
+.fs-20-category { font-size: var(--fs-20-category); }
+.fs-22 { font-size: var(--fs-22); }
+.fs-26 { font-size: var(--fs-26); }
+.fs-18 { font-size: var(--fs-18); }
+.fs-30 { font-size: var(--fs-30); }
+.fs-24 { font-size: var(--fs-24); }
+.fs-14 { font-size: var(--fs-14); }
+
+/* Font Weights */
+.fw-500-medium { font-weight: var(--fw-500-medium); }
+.fw-700-bold { font-weight: var(--fw-700-bold); }
+.fw-400-normal { font-weight: var(--fw-400-normal); }
 
 body{
   font-family: var(--ff-body);
 }
 
+.nav-subpages .list-items {
+  display: flex;
+  flex-direction: row;
+  gap: 2.06rem;
+}
+
+.nav-subpages{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3.75rem;
+  margin-top: 2rem;
+}
+
+.nav-subpages .menu-icon {
+  display: none;
+}
+/* .center-horizontally{} */
+
+@media (max-width: 375px) {
+  .nav-subpages .list-items {
+    display: none; 
+  }
+  .nav-subpages .menu-icon {
+    display: block;
+  }
+  .nav-subpages{
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
+}
 
