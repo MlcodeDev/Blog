@@ -87,6 +87,7 @@ textarea:not([rows]) {
   --clr-light: #8695A4;
 
   --ff-primary: "Heebo", sans-serif;
+  --ff-body: var(--ff-primary);
 
   --fs-44: 2.75rem;
   --fs-16: 1rem;
@@ -117,12 +118,9 @@ textarea:not([rows]) {
   }
 }
 
+
 body{
-  background-color: black;
+  font-family: var(--ff-body);
 }
-*{
-    color: white;
-}
-.test{
-  font-family: var(--ff-primary);
-}
+
+
