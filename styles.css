@@ -57,7 +57,7 @@ a:not([class]) {
   color: currentColor;
 }
 
-/* Make images easier to work with */
+/* Make images easier to w2.375ork with */
 img,
 picture,
 svg {
@@ -99,6 +99,7 @@ a {
   --clr-dark: #21243D;
   --clr-light: #8695A4;
   --clr-black: #000;
+  --clr-white: #fff;
 
   --ff-primary: "Heebo", sans-serif;
   --ff-body: var(--ff-primary);
@@ -139,10 +140,10 @@ a {
 .clr-dark { color: var(--clr-dark); }
 .clr-light { color: var(--clr-light); }
 .clr-black { color: var(--clr-black); }
+.clr-white { color: var(--clr-white); }
 
 /* Font Families */
 .ff-primary { font-family: var(--ff-primary); }
-
 /* Font Sizes */
 .fs-44 { font-size: var(--fs-44); }
 .fs-16 { font-size: var(--fs-16); }
@@ -169,7 +170,6 @@ body{
   flex-direction: row;
   gap: 2.06rem;
 }
-
 .nav-subpages{
   display: flex;
   justify-content: flex-end;
@@ -180,18 +180,85 @@ body{
 .nav-subpages .menu-icon {
   display: none;
 }
-/* .center-horizontally{} */
+
+.center-horizontally{
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  gap: 6.31rem;
+  max-width: 53.44rem;
+  margin-top: 10.31rem;
+}
+
+.hero button {
+  background-color: var(--clr-primary);
+  padding: 1.063rem 1.25rem 1.063rem 1.25rem;
+  border: none;
+  border-radius: 2px;
+}
+
+.hero h1 {
+  margin-bottom: 2.5rem;
+  max-width: 31.63rem;
+}
+
+.hero p {
+  margin-bottom: 2.47rem;
+  max-width: 31.06rem;
+}
+
+.hero img {
+  max-width: 15.5rem;
+}
 
 @media (max-width: 375px) {
   .nav-subpages .list-items {
     display: none; 
   }
+  
   .nav-subpages .menu-icon {
     display: block;
   }
+  
   .nav-subpages{
     margin-right: 1rem;
     margin-top: 1rem;
+  }
+  
+  .hero img {
+    max-width: 10.67rem;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    align-items: center;
+    max-width: 20.5rem;
+    gap: 2.12rem;
+    margin-top: 3rem;
+  }
+
+  .hero h1 {
+    margin-bottom: 1.31rem;
+    min-height: 7.5rem;
+    max-width: 13rem;
+  }
+
+  .hero p {
+    margin-bottom: 1.69rem;
+  }
+  
+  .hero button {
+    max-width: 13rem;
+  }
+
+  .hero-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 
