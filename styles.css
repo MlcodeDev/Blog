@@ -96,7 +96,8 @@ a {
 
   --clr-primary: #FF6464;
   --clr-secondary: #00A8CC;
-  --clr-dark: #21243D;
+  --clr-blue-100: #EDF7FA;
+  --clr-dark: #21243D; 
   --clr-light: #8695A4;
   --clr-black: #000;
   --clr-white: #fff;
@@ -191,6 +192,7 @@ body{
   gap: 6.31rem;
   max-width: 53.44rem;
   margin-top: 10.31rem;
+  margin-bottom: 4.44rem;
 }
 
 .hero button {
@@ -212,6 +214,52 @@ body{
 
 .hero img {
   max-width: 15.5rem;
+}
+
+.recent-posts {
+  background-color: var(--clr-blue-100);
+  width: 100%;
+  max-width: 100%;
+  min-height: 24.75rem;
+  padding-top: 1.69rem;
+}
+
+.recent-posts .wrapper {
+  max-width: 53.5rem;
+}
+
+.recent-posts .top-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.recent-posts .post {
+  background-color: var(--clr-white);
+  width: 26.12rem;
+  min-height: 18.44rem;
+  border-radius: 4px;
+  padding: 1.438rem;
+  padding-top: 1.5rem;
+}
+
+.recent-posts .post h1 {
+  /* width: 26.12rem; */
+  margin-bottom: 2.188rem;
+}
+
+.recent-posts .post-wrapper .post ul{
+  display: flex;
+  flex-direction: row;
+  gap: 1.875rem;
+  margin-bottom: 1.188rem;
+}
+
+.post-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
 }
 
 @media (max-width: 375px) {
@@ -260,5 +308,28 @@ body{
     align-items: center;
     text-align: center;
   }
+  
+  .recent-posts .post {
+    width: 22.12rem;
+    max-width: calc(100% - 1.38rem);
+    min-height: 16.62rem;
+    margin-left: .69rem;
+  }
+
+  .recent-posts .top-wrapper a {
+    display: none;
+  }
+
+  .recent-posts .top-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .post-wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
 }
 
