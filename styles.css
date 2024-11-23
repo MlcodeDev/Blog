@@ -353,6 +353,10 @@ body{
     text-align: center;
   }
   
+  .recent-posts {
+    padding-bottom: 2.38rem;
+  }
+
   .recent-posts .post {
     width: 22.12rem;
     max-width: calc(100% - 1.38rem);
@@ -374,6 +378,45 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
   }
+  
+  .featured-works .top-txt{
+    display: flex;
+    justify-self: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
+  .featured-works .post-wrapper :is(.post-2, .post-3){
+    display: none;
+  }
+
+  .featured-works .post-wrapper > img:not(:first-of-type){
+    display: none;
+  }
+  
+  .featured-works .post {
+    flex-direction: column;
+    justify-self: center;
+    width: 21.19rem;
+    max-width: calc(100% - 1.12rem);
+    min-height: 28.44rem;
+    gap: 1.06rem;
+  }
+
+  .featured-works .post h1 {
+    margin-bottom: 1rem;
+  }
+
+  .featured-works .post category-wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .featured-works .post button {
+    margin-right: 1.37rem;
+  }
+
+  .featured-works .post-wrapper {
+    gap: 1.06rem;
+  }
 }
 
