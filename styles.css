@@ -124,7 +124,7 @@ a {
   --fw-400-normal: 400;
 }
 
-@media (max-width: 375px){
+@media (max-width: 600px){
   :root{
     --fs-44: 2rem;
     --fs-22: 1.125rem;
@@ -328,7 +328,7 @@ footer .wrapper {
   width: fit-content;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 600px) {
   .nav-subpages .list-items {
     display: none; 
   }
@@ -380,7 +380,8 @@ footer .wrapper {
   }
 
   .recent-posts .post {
-    width: 22.12rem;
+    /* width: 22.12rem; */
+    width: fit-content;
     max-width: calc(100% - 1.38rem);
     min-height: 16.62rem;
     margin-left: .69rem;
